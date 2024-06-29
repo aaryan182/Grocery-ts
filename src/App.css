@@ -1,0 +1,73 @@
+.input23 input ~ span:before,
+.input23 input ~ span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  transition: 0.8s;
+}
+
+.input23 input ~ span:after {
+  left: auto;
+  right: 0;
+}
+
+.input23 input:focus ~ span:before,
+.input23 input:focus ~ span:after {
+  width: 100%;
+  transition: 0.8s;
+}
+
+.input23 input ~ label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: #9ca3af;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    transform-origin: left top;
+  }
+  
+  .input23 input:focus ~ label,
+  .input23 input:not(:placeholder-shown) ~ label {
+    top: -0.5rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    color: #3b82f6;
+  }
+  
+
+.button2{
+    width: 160px;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid #0c0c0c;
+    z-index: 0;
+}
+.button2:hover:after {
+    top: 0;
+    left: 0;
+}
+.button2:after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    border-radius: 8px;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    transition: 0.2s;
+    background-color: #0c0c0c;
+}
